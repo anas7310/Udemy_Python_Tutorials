@@ -1,0 +1,16 @@
+2025-09-01 05-38-42 - ArithmaticApp - DEBUG - Adding 10 + 13 = 23
+2025-09-01 05-38-42 - ArithmaticApp - DEBUG - Subtracting 9 - 3= 6
+2025-09-01 05-38-42 - ArithmaticApp - DEBUG - Multiplying: 47 * 2= 94
+2025-09-01 05-38-42 - ArithmaticApp - DEBUG - Divide 20 / 10= 2.0
+2025-09-01 05-38-55 - ArithmaticApp - DEBUG - Adding 10 + 13 = 23
+2025-09-01 05-38-55 - ArithmaticApp - DEBUG - Subtracting 9 - 3= 6
+2025-09-01 05-38-55 - ArithmaticApp - DEBUG - Multiplying: 47 * 2= 94
+2025-09-01 05-38-55 - ArithmaticApp - ERROR - division by zero
+2025-09-01 05-39-27 - ArithmaticApp - DEBUG - Adding 10 + 13 = 23
+2025-09-01 05-39-27 - ArithmaticApp - DEBUG - Subtracting 9 - 3= 6
+2025-09-01 05-39-27 - ArithmaticApp - DEBUG - Multiplying: 47 * 2= 94
+2025-09-01 05-39-27 - ArithmaticApp - ERROR - Cannot divide by zero
+2025-09-01 05-52-21 - ArithmaticApp - DEBUG - Adding 10 + 13 = 23
+2025-09-01 05-52-21 - ArithmaticApp - DEBUG - Subtracting 9 - 3= 6
+2025-09-01 05-52-21 - ArithmaticApp - DEBUG - Multiplying: 47 * 2= 94
+2025-09-01 05-52-21 - ArithmaticApp - ERROR - Cannot divide by zero
