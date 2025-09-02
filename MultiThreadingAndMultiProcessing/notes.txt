@@ -1,0 +1,64 @@
+MultiThreading and MultiProcessing
+
+1. Program
+2. Process
+3. Threads
+4. Example of Process and Threads
+
+1. Program -> A program is a sequence of instructions written in programming languages. [Eg. Python, Java, C/C++]
+   Eg: Google Chrome -> exe file <- Program -> How Browser should work (Sequence of Instructions)
+       Word, Excel, etc. all are programs
+
+2. Process -> A process is simply an instance of a program that is being executed.
+   Explanation : When we open google chrome, an instance of the program is created/executed. I can open any number of browsers so each and every browser is a process.
+   ** Important points:
+   - It works along with the OS.
+   - It requires lot of computer resources.
+   - Each process have a separate memory space in CPU. (For one browser it will have a separate memory space and for another browser it will have another separate memory space)
+  *- One process cannot corrupt another process. (If one browser faces some problem then another browser will not get closed.)
+  *- Each process require some I/O resources requirement
+
+  Disadvantage of Process:
+  - It will have increased execution time to switch between processes.
+
+
+  Example: Browser -> Process1 -> Id1
+           Excel -> Process2 -> Id2
+           Application -> Process3 -> Id3
+
+
+      -----------------------------------------------------------
+      |  Code       |  Data  (local and           |   Heap      |
+      | Segment     | Segment global variables)   |             |
+      |---------------------------------------------------------|
+      |                         |                               |
+      |         STACK           |           REGISTERS           |
+      |                         |                               |
+      |---------------------------------------------------------|
+      |                                                         |
+      |                                                         |
+      |                                                         |
+      |                                                         |
+      -----------------------------------------------------------
+
+
+
+3. Threads -> A thread is a unit of execution within a process. With respect to threads they are of multiple types:
+
+      -> Single Thread Process:
+      -----------------------------------------------------------
+      |  Code       |  Data  (local and           |   Heap      |      Example: open MS-Paint
+      | Segment     | Segment global variables)   |             |                   |
+      |---------------------------------------------------------|                   |
+      |                         |                               |           Opened as a process --> It will
+      |         STACK           |           REGISTERS           |                   create a thread to draw
+      |                         |                               |                   Rectangle Box, Circle,etc.
+      |---------------------------------------------------------|
+      |                                                         |       Explanation -> There can be many
+      |                       Single Thread                     |       threads from a single Process to
+      |                     <--------->                         |       perform different tasks in one process
+      |                                                         |
+      -----------------------------------------------------------
+
+
+      -> Multiple Threads -> In this each thread have its own stack and heap and registers.
