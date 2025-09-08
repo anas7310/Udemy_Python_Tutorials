@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>SuccessIf</title>
+</head>
+<body>
+
+
+<h1>
+   Based on the marks you have {{results}} the exam.
+</h1>
+    {% if results>=50 %}
+    <h1>You have Passed  with marks {{results}}</h1>
+    {% else %}
+    <h2>You have Failed with marks {{results}}</h2>
+    {% endif %}
+
+
+</body>
+</html>

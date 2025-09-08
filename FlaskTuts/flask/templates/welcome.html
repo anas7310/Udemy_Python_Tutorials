@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Flask Page</title>
+  <style>
+    /* Page Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+      background: linear-gradient(-45deg, #1e3c72, #2a5298, #ff512f, #dd2476);
+      background-size: 400% 400%;
+      animation: gradientShift 12s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin-top: 80px;
+      animation: fadeInDown 2s ease forwards;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 20px;
+      animation: fadeIn 3s ease forwards;
+    }
+
+    .hero a {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #ffffff20;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.4s ease;
+    }
+
+    .hero a:hover {
+      background: #fff;
+      color: #2a5298;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #fff;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #2a5298; }
+      to { text-shadow: 0 0 20px #ff512f, 0 0 40px #dd2476; }
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Carousel Section */
+    .carousel {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 80px 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 20px;
+      animation: scroll 30s linear infinite;
+    }
+
+    .card {
+      flex: 0 0 250px;
+      height: 180px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.4s ease, background 0.4s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .username {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .comment {
+      font-style: italic;
+      opacity: 0.9;
+      flex-grow: 1;
+    }
+
+    .rating {
+      font-size: 1rem;
+      color: gold;
+      margin-top: 10px;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .card {
+        flex: 0 0 200px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>✨ Welcome to Our World ✨</h1>
+    <p>Experience smooth animations, transitions, and a parallax carousel.</p>
+    <a href="index">Get Started</a>
+      <a href="about">About Us</a>
+  </div>
+
+  <!-- Parallax Carousel -->
+ <div id="carousel" class="carousel">
+    <div class="carousel-track">
+      <!-- Cards with usernames, comments & ratings -->
+      <div class="card">
+        <div class="username">@alex_92</div>
+        <div class="comment">"This site is absolutely stunning!"</div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <div class="username">@sophia_writes</div>
+        <div class="comment">"Love the animations, feels smooth and modern."</div>
+        <div class="rating">⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <div class="username">@mike_dev</div>
+        <div class="comment">"Carousel effect is top-notch!"</div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <div class="username">@luna_art</div>
+        <div class="comment">"The design is inspiring, great work."</div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <div class="username">@jason_t</div>
+        <div class="comment">"Nice gradients and transitions!"</div>
+        <div class="rating">⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <div class="username">@emily_r</div>
+        <div class="comment">"Simple yet elegant, exactly what I like."</div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <!-- Duplicate for infinite loop -->
+      <div class="card">
+        <div class="username">@alex_92</div>
+        <div class="comment">"This site is absolutely stunning!"</div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <div class="username">@sophia_writes</div>
+        <div class="comment">"Love the animations, feels smooth and modern."</div>
+        <div class="rating">⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <div class="username">@mike_dev</div>
+        <div class="comment">"Carousel effect is top-notch!"</div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <div class="username">@luna_art</div>
+        <div class="comment">"The design is inspiring, great work."</div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <div class="username">@jason_t</div>
+        <div class="comment">"Nice gradients and transitions!"</div>
+        <div class="rating">⭐⭐⭐⭐</div>
+      </div>
+      <div class="card">
+        <div class="username">@emily_r</div>
+        <div class="comment">"Simple yet elegant, exactly what I like."</div>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
