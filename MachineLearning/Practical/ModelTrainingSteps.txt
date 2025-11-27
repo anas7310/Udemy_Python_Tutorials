@@ -1,0 +1,10 @@
+#%%
+How to train a model step-by-step approach:
+1. Load Dataset
+2. Cleaning of Data
+3. Feature Engineering and EDA
+4. Train Test Split
+5. Train model
+6. Find Accuracy
+7. HyperParameter Tuning
+8. Repeat step 6 and 7 until found the best fit model
